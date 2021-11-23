@@ -1,12 +1,16 @@
 extends layout 
-
 block content
     .contentWrapper
         .productwrapper
-            .productbox
-            .productbox
-            .productbox
-            .productbox
-            .productbox
-            .productbox
+            each val, key in products   
+                .productbox
+                    img.productImage.productsubbox(src= val.imagelink)
+                    .productinfobox.productsubbox
+                        .productsubbox.titlebox
+                            |#{val.name}
+                        .productsubbox.descbox 
+                            |#{val.description}
+                        .productsubbox.
+                        
+            
 
